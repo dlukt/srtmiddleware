@@ -47,7 +47,7 @@ srtmiddleware --from="srt://0.0.0.0:12345?mode=listener" --to="srt://127.0.0.1:1
 ```
 You can also set a `passphrase` parameter if you're using listener mode.
 ```bash
-srtmiddleware --from="srt://0.0.0.0:5555?mode=listener%passphrase=my_secret" --to="srt://127.0.0.1:10080"
+srtmiddleware --from="srt://0.0.0.0:5555?mode=listener&passphrase=my_secret" --to="srt://127.0.0.1:10080"
 ```
 See also [further SRT options](https://github.com/datarhei/gosrt/blob/main/config.go)
 Or the [Haivision document](https://github.com/Haivision/srt/blob/master/docs/apps/srt-live-transmit.md)
