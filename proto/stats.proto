@@ -1,0 +1,13 @@
+syntax = "proto3";
+option go_package = "github.com/dlukt/srtmiddleware/stats";
+package stats;
+
+service Stats {
+  rpc GetBytesAverage(Request) returns (stream BytesAverage) {}
+}
+
+message Request {}
+
+message BytesAverage {
+  double bytesAverage = 1;
+}

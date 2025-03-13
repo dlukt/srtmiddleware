@@ -1,0 +1,12 @@
+[Unit]
+Description=srtmiddleware proxy
+After=local-fs.target network.target
+
+[Service]
+Type=simple
+Restart=always
+SendSIGKILL=true
+ExecStart=/usr/local/bin/srtmiddleware proxy --from="" --to=""
+
+[Install]
+WantedBy=multi-user.target
