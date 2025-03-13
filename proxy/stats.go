@@ -6,16 +6,6 @@ import (
 	"time"
 )
 
-/*
-type statJson struct {
-	BytesAverage     float64 `json:"bavg"`
-	PacketsPerSecond float64 `json:"avg"`
-}
-
-*/
-
-// var jsonEnc = json.NewEncoder(os.Stdout)
-
 var bytesAverage float64 = 0.0
 
 func NewStats() *Stats {
@@ -74,34 +64,6 @@ func (s *Stats) Tick(ctx context.Context) {
 			s.last = c
 
 			s.lock.Unlock()
-
-			/*
-				jsonEnc.Encode(statJson{
-					BytesAverage:     bavg,
-					PacketsPerSecond: avg,
-				})
-			*/
-
-			/*
-				if bavg >= 0.5 {
-					if s.currentScene != LiveScene {
-						s.SetScene(LiveScene)
-						fmt.Fprintln(os.Stdout, "Scene changed to:", LiveScene)
-					}
-				} else if bavg < 0.5 && bavg != 0.0 {
-					if s.currentScene != LBRScene {
-						s.SetScene(LBRScene)
-						fmt.Fprintln(os.Stdout, "Scene changed to:", LBRScene)
-					}
-				} else {
-					if s.currentScene != BRBScene {
-						s.SetScene(BRBScene)
-						fmt.Fprintln(os.Stdout, "Scene changed to:", BRBScene)
-					}
-				}
-			*/
-			// fmt.Fprintf(os.Stderr, "\r%-54s: %8.3f kpackets (%8.3f packets/s), %8.3f mbytes (%8.3f Mbps)", c, float64(s.total)/1024, avg, float64(s.btotal)/1024/1024, bavg)
-
 		}
 	}
 }
