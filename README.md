@@ -29,6 +29,9 @@ go build
 mv srtmiddleware /usr/local/bin/
 ```
 
+or
+
+Download pre-built binaries for your OS/arch from the (Github releases page)[https://github.com/dlukt/srtmiddleware/releases]
 ## Running
 **The proxy MUST be running before starting the monitor.**
 
