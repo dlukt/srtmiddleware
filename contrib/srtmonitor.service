@@ -6,7 +6,7 @@ Requires=srtproxy.service
 [Service]
 Type=simple
 Restart=always
-ExecStart=/usr/local/bin/srtmiddleware monitor --wsaddr="" --wspsas=""
+ExecStart=/usr/local/bin/srtmiddleware monitor --config=/etc/srtmiddleware.yaml
 
 [Install]
 WantedBy=multi-user.target

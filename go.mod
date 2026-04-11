@@ -5,15 +5,16 @@ go 1.26.2
 require (
 	github.com/andreykaipov/goobs v1.8.3
 	github.com/datarhei/gosrt v0.10.0
+	github.com/gorilla/websocket v1.5.3
 	github.com/spf13/cobra v1.10.2
 	google.golang.org/grpc v1.80.0
 	google.golang.org/protobuf v1.36.11
+	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (
 	github.com/benburkert/openpgp v0.0.0-20160410205803-c2471f86866c // indirect
 	github.com/buger/jsonparser v1.1.2 // indirect
-	github.com/gorilla/websocket v1.5.3 // indirect
 	github.com/hashicorp/logutils v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
